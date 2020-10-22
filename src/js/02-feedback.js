@@ -1,4 +1,4 @@
-// import throttle from 'lodash.throttle';
+import throttle from 'lodash.throttle';
 import '../css/common.css';
 import '../css/feedback-form.css';
 
@@ -21,8 +21,8 @@ populateTextarea();
  */
 function onFormSubmit(evt) {
   evt.preventDefault();
-
   console.log('Отправляем форму');
+  
   evt.currentTarget.reset();
   localStorage.removeItem(STORAGE_KEY);
 }
@@ -32,9 +32,10 @@ function onFormSubmit(evt) {
  * - Сохраняем его в хранилище
  * - Можно добавить throttle
  */
+
 function onTextareaInput(evt) {
   const message = evt.target.value;
-
+ 
   localStorage.setItem(STORAGE_KEY, message);
 }
 
@@ -53,13 +54,23 @@ function populateTextarea() {
 // Домой
 // сделать так чтобы сохраняло не только сообщение но и имя, и все в одном обьекте
 
-// const formData = {};
+ const formData = {};
 
-// refs.form.addEventListener('input', e => {
-//   // console.log(e.target.name);
-//   // console.log(e.target.value);
+refs.form.addEventListener('input', (e) => {
+  console.log(e.target.name);
+  console.log(e.target.value);
 
-//   formData[e.target.name] = e.target.value;
+  formData[e.target.name] = e.target.value;
+  console.log(formData)
+}); 
 
-//   console.log(formData);
-// });
+// const saveJSON = JSON.stringify(formData);
+
+
+// const saveJSON = localStorage.setItem('my-top-name', JSON.stringify(formData);
+
+// const savedDatas = localStorage.getItem('my-top-name');
+// console.log("savedDatas", savedDatas);
+
+// const parsedDatas = JSON.parse(savedDatas);
+// console.log("parsedDatas", parsedDatas);
