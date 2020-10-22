@@ -1,0 +1,27 @@
+{
+  "name": "js-19-parcel",
+  "version": "1.0.0",
+  "description": "NPM basics",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abakarovmaks/js-19-parcel.git"
+  },
+  "author": "Abakarov Maksym abakarovmaks@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abakarovmaks/js-19-parcel/issues"
+  },
+  "homepage": "https://github.com/abakarovmaks/js-19-parcel#readme",
+  "dependencies": {
+    "joi": "^17.2.1",
+    "shortid": "^2.2.15"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4"
+  }
+}
