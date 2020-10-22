@@ -1,1 +1,1 @@
-console.log('Привет');
+import './css/common.css';
